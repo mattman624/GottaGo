@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  gottago.web:
+    image: gottago.web
+    build:
+      context: .
+      dockerfile: GottaGo.Web\GottaGo.Web\Dockerfile
