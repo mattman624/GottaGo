@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{44B318
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2E3900CE-099D-44A1-8D53-AAD3C2A246C0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GottaGo.Shared", "GottaGo.Shared\GottaGo.Shared\GottaGo.Shared.csproj", "{E60E91C8-09B3-4E38-9DEE-A39EFBA52814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GottaGo.Shared", "GottaGo.Shared\GottaGo.Shared.csproj", "{E60E91C8-09B3-4E38-9DEE-A39EFBA52814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GottaGo.Web", "GottaGo.Web\GottaGo.Web\GottaGo.Web.csproj", "{D70FEC70-6AB5-4BD5-934B-7446C79D404A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GottaGo.Web", "GottaGo.Web\GottaGo.Web.csproj", "{D70FEC70-6AB5-4BD5-934B-7446C79D404A}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C37EE17B-4866-4180-BE15-367E2DC09AEE}"
 EndProject

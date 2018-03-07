@@ -5,4 +5,4 @@ services:
     image: gottago.web
     build:
       context: .
-      dockerfile: GottaGo.Web\GottaGo.Web\Dockerfile
+      dockerfile: GottaGo.Web\Dockerfile
