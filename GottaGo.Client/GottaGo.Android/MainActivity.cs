@@ -1,14 +1,8 @@
-﻿using System;
-
+﻿using GottaGo.Client;
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using GottaGo.Client;
 using Prism;
-using Unity;
 using Prism.Ioc;
 
 namespace GottaGo.Droid
