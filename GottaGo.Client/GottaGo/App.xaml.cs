@@ -1,6 +1,8 @@
-﻿using GottaGo.Client.Views;
+﻿using GottaGo.Client.Contracts;
+using GottaGo.Client.Views;
 using Prism;
 using Prism.Ioc;
+using Prism.Navigation;
 using Prism.Unity;
 using System;
 using System.Collections.Generic;
@@ -37,6 +39,9 @@ namespace GottaGo.Client
         
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            //containerRegistry.Register<INavigationService, NavigationService>();
+            containerRegistry.Register<IUtils, Utils.Utils>();
+
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginPage>();
         }
