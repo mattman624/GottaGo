@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace GottaGo
+namespace GottaGo.Client
 {
 	public partial class MainPage : ContentPage
 	{

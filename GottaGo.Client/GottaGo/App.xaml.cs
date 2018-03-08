@@ -1,20 +1,24 @@
-﻿using System;
+﻿using GottaGo.Client.Views;
+using Prism;
+using Prism.Ioc;
+using Prism.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
 
-namespace GottaGo
+namespace GottaGo.Client
 {
-	public partial class App : Application
+	public partial class App : PrismApplication
 	{
-		public App ()
+		public App () : base()
 		{
-			InitializeComponent();
+            //InitializeComponent();
 
-			MainPage = new GottaGo.MainPage();
-		}
+            //MainPage = new GottaGo.Client.MainPage();
+        }
 
 		protected override void OnStart ()
 		{
@@ -30,5 +34,16 @@ namespace GottaGo
 		{
 			// Handle when your app resumes
 		}
-	}
+        
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<LoginPage>();
+        }
+
+        protected override void OnInitialized()
+        {
+            NavigationService.NavigateAsync("NavigationPage/LoginPage");
+        }
+    }
 }
