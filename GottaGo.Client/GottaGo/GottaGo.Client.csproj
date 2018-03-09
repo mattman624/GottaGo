@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\BathroomListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -24,5 +27,15 @@
 
   <ItemGroup>
     <Folder Include="Constants\" />
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Plugin.SimpleLogger">
+      <HintPath>..\..\dlls\Shared\Plugin.SimpleLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.SimpleLogger.Abstractions">
+      <HintPath>..\..\dlls\Shared\Plugin.SimpleLogger.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

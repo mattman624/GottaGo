@@ -7,11 +7,11 @@ using System.Linq;
 
 namespace GottaGo.Client.ViewModels
 {
-	public class LoginPageViewModel : BaseViewModel
+	public class BathroomListPageViewModel : BaseViewModel
 	{
-        public LoginPageViewModel(IUtils utils) : base(utils)
+        public BathroomListPageViewModel(IUtils utils) : base(utils)
         {
-            Title = "Log in";
+
         }
 	}
 }

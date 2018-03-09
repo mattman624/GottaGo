@@ -1,11 +1,13 @@
-﻿using GottaGo.Client.Contracts;
+﻿using GottaGo.Client.Utils;
 using GottaGo.Client.Views;
+using Plugin.SimpleLogger;
 using Prism;
 using Prism.Ioc;
 using Prism.Navigation;
 using Prism.Unity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -41,13 +43,15 @@ namespace GottaGo.Client
         {
             //containerRegistry.Register<INavigationService, NavigationService>();
             containerRegistry.Register<IUtils, Utils.Utils>();
+            containerRegistry.Register<ILogger, Logger>();
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginPage>();
+            containerRegistry.RegisterForNavigation<BathroomListPage>();
         }
 
         protected override void OnInitialized()
-        {
+        {            
             NavigationService.NavigateAsync("NavigationPage/LoginPage");
         }
     }

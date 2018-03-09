@@ -1,4 +1,4 @@
-﻿using GottaGo.Client.Contracts;
+﻿using GottaGo.Client.Utils;
 using Prism;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -12,10 +12,12 @@ namespace GottaGo.Client.ViewModels
     {
         IUtils _utils;
         INavigationService NavigationService;
+        ILogger Log;
         public BaseViewModel(IUtils utils)
         {
             _utils = utils;
             NavigationService = utils.NavigationService;
+            Log = utils.Logger;
         }
         public bool IsActive { get; set; }
 
@@ -38,14 +40,37 @@ namespace GottaGo.Client.ViewModels
             //throw new NotImplementedException();
         }
 
+        public virtual void NavigatedTo(NavigationParameters parameters)
+        {
+            Log.Info($"{GetType().Name} NavigatedTo");
+        }
+
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-            //throw new NotImplementedException();
+            Log.Info($"OnNavigatedTo {GetType().Name}");
+            LogParameters(parameters);
+            NavigatedTo(parameters);
         }
 
         public void OnNavigatingTo(NavigationParameters parameters)
         {
             //throw new NotImplementedException();
+        }
+
+        private void LogParameters(NavigationParameters parameters)
+        {
+            try
+            {
+                //if (Logger.IsInfoEnabled)
+                    foreach (var parameter in parameters)
+
+
+                        Log.Debug($"{parameter.Key} = {parameter.Value}");
+            }
+            catch (Exception ex)
+            {
+                Log.Error("get paramaters failed", ex);
+            }
         }
     }
 }
