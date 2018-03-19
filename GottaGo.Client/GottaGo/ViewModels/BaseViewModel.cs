@@ -1,4 +1,4 @@
-﻿using GottaGo.Client.Utils;
+﻿using GottaGo.Client.Utilities;
 using Prism;
 using Prism.Mvvm;
 using Prism.Navigation;

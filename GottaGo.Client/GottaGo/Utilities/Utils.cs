@@ -1,10 +1,10 @@
-﻿using GottaGo.Client.Utils;
+﻿using GottaGo.Client.Utilities;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GottaGo.Client.Utils
+namespace GottaGo.Client.Utilities
 {
     public class Utils : IUtils
     {

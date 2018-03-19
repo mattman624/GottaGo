@@ -20,6 +20,9 @@
     <EmbeddedResource Update="Views\BathroomListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\FacilityListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -27,7 +30,11 @@
 
   <ItemGroup>
     <Folder Include="Constants\" />
-    <Folder Include="Contracts\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\GottaGo.Shared\GottaGo.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

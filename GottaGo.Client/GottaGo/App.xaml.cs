@@ -1,4 +1,4 @@
-﻿using GottaGo.Client.Utils;
+﻿using GottaGo.Client.Utilities;
 using GottaGo.Client.Views;
 using Plugin.SimpleLogger;
 using Prism;
@@ -42,16 +42,18 @@ namespace GottaGo.Client
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //containerRegistry.Register<INavigationService, NavigationService>();
-            containerRegistry.Register<IUtils, Utils.Utils>();
+            containerRegistry.Register<IUtils, Utils>();
             containerRegistry.Register<ILogger, Logger>();
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginPage>();
             containerRegistry.RegisterForNavigation<BathroomListPage>();
+            containerRegistry.RegisterForNavigation<FacilityListPage>();
         }
 
         protected override void OnInitialized()
-        {            
+        {
+            //Container.Resolve<>();
             NavigationService.NavigateAsync("NavigationPage/LoginPage");
         }
     }
