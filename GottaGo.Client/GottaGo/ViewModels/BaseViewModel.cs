@@ -5,12 +5,13 @@ using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace GottaGo.Client.ViewModels
 {
     public class BaseViewModel : BindableBase, INavigatedAware, INavigatingAware, INavigationAware, IActiveAware
     {
-        IUtils _utils;
+        private IUtils _utils;
         INavigationService NavigationService;
         ILogger Log;
         public BaseViewModel(IUtils utils)
@@ -29,18 +30,15 @@ namespace GottaGo.Client.ViewModels
         }
 
         public event EventHandler IsActiveChanged;
-
-        //public abstract void NavigatedFrom(NavigationParameters parameters)
-        //{
-
-        //}
+        
+        
 
         public void OnNavigatedFrom(NavigationParameters parameters)
         {
             //throw new NotImplementedException();
         }
 
-        public virtual void NavigatedTo(NavigationParameters parameters)
+        protected virtual void NavigatedTo(NavigationParameters parameters)
         {
             Log.Info($"{GetType().Name} NavigatedTo");
         }
@@ -54,7 +52,14 @@ namespace GottaGo.Client.ViewModels
 
         public void OnNavigatingTo(NavigationParameters parameters)
         {
-            //throw new NotImplementedException();
+            Log.Info($"OnNavigatingTo {GetType().Name}");
+            LogParameters(parameters);
+            NavigatingToAsync(parameters);
+        }
+
+        protected virtual Task NavigatingToAsync(NavigationParameters parameters)
+        {            
+            return Task.Run(() => Log.Info($"{GetType().Name} NavigatingTo"));
         }
 
         private void LogParameters(NavigationParameters parameters)

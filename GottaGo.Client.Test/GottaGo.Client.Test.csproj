@@ -130,6 +130,10 @@
       <Project>{af98a322-4ad9-40fa-aba3-30e535767954}</Project>
       <Name>GottaGo.Client</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GottaGo.Shared\GottaGo.Shared.csproj">
+      <Project>{e60e91c8-09b3-4e38-9dee-a39efba52814}</Project>
+      <Name>GottaGo.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
